@@ -1,0 +1,79 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,n1,n2,n3,n4,j,k,sum,d,mult,m,p,r,c;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++){
+        sum=0;
+        mult=0;
+        scanf("%d%d%d%d",&n1,&n2,&n3,&n4);
+        k=n1;
+        for(j=1;j<=4;j++){
+            r=k%10;
+            k=k/10;
+            if(j%2!=0){
+                sum=sum+r;
+            }
+            else if(j%2==0){
+                d=r*2;
+                m=d%10;
+                d=d/10;
+                p=d%10;
+                mult=mult+m+p;
+            }
+        }
+        k=n2;
+        for(j=1;j<=4;j++){
+            r=k%10;
+            k=k/10;
+            if(j%2!=0){
+                sum=sum+r;
+            }
+            else if(j%2==0){
+                d=r*2;
+                m=d%10;
+                d=d/10;
+                p=d%10;
+                mult=mult+m+p;
+            }
+        }
+        k=n3;
+        for(j=1;j<=4;j++){
+            r=k%10;
+            k=k/10;
+            if(j%2!=0){
+                sum=sum+r;
+            }
+            else if(j%2==0){
+                d=r*2;
+                m=d%10;
+                d=d/10;
+                p=d%10;
+                mult=mult+m+p;
+            }
+        }
+        k=n4;
+        for(j=1;j<=4;j++){
+            r=k%10;
+            k=k/10;
+            if(j%2!=0){
+                sum=sum+r;
+            }
+            else if(j%2==0){
+                d=r*2;
+                m=d%10;
+                d=d/10;
+                p=d%10;
+                mult=mult+m+p;
+            }
+        }
+        c=sum+mult;
+        if(c%10==0){
+            printf("Valid\n");
+        }
+        else{
+            printf("Invalid\n");
+        }
+    }
+    return 0;
+}
